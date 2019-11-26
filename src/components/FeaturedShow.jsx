@@ -1,5 +1,7 @@
 import React from 'react'
 
-return <section className="featuredShowContainer"></section>
+const FeaturedShow = props => {
+  return <section className="featuredShowContainer"></section>
+}
 
 export default FeaturedShow
