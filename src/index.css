@@ -12,3 +12,17 @@ body {
 }
 
 /* this is curt's comment */
+
+/* Georg's adds */
+
+.featuredShowContainer {
+  /* Container for featured show at top of Home Page */
+}
+
+.topratedShowsContainer {
+  /* Container for tiles showing TV Show previews on Home Page */
+}
+
+.footer {
+  /* Container for footer */
+}
