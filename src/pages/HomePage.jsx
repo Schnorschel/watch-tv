@@ -1,10 +1,14 @@
 import React from 'react'
-import HelloWorld from '../components/HelloWorld'
+import FeaturedShow from '../components/FeaturedShow'
+import ShowsOverview from '../components/ShowsOverview'
 
 const HomePage = () => {
   return (
     <>
-      <FeaturedShow />
+      <section className="featuredShowContainer">
+        <FeaturedShow />
+      </section>
+      <section className="topratedShowsContainer"
       <ShowsOverview />
       <section className="footer"></section>
     </>
