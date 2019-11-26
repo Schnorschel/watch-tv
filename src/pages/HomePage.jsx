@@ -1,6 +1,7 @@
 import React from 'react'
 import FeaturedShow from '../components/FeaturedShow'
-import ShowsOverview from '../components/ShowsOverview'
+import ShowPreview from '../components/ShowPreview'
+import Footer from '../components/Footer'
 
 const HomePage = () => {
   return (
@@ -8,7 +9,6 @@ const HomePage = () => {
       {/* <FeaturedShow /> */}
       <ShowPreview />
       <Footer />
-      <section className="footer"></section>
     </>
   )
 }
