@@ -5,7 +5,7 @@ import ShowsOverview from '../components/ShowsOverview'
 const HomePage = () => {
   return (
     <>
-      <FeaturedShow />
+      {/* <FeaturedShow /> */}
       <ShowPreview />
       <Footer />
       <section className="footer"></section>
