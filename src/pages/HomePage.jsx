@@ -1,8 +1,16 @@
 import React from 'react'
-import HelloWorld from '../components/HelloWorld'
+import FeaturedShow from '../components/FeaturedShow'
+import ShowsOverview from '../components/ShowsOverview'
 
 const HomePage = () => {
-  return <HelloWorld />
+  return (
+    <>
+      <FeaturedShow />
+      <ShowPreview />
+      <Footer />
+      <section className="footer"></section>
+    </>
+  )
 }
 
 export default HomePage
