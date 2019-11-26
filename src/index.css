@@ -15,7 +15,23 @@ body {
 /* this is curt's comment */
 
 .featuredShowContainer {
+  /* Container for featured TV Show section at top of Home Page */
 }
 
-.topratedShowsContainer {
+.previewShowsContainer {
+  /* Container for all TV show preview tiles on Home Page */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.previewShowContainer {
+  /* TV Show tile (container) on Home Page */
+}
+
+.previewShowImageContainer {
+  /* Container for images of TV show preview tiles on Home Page */
+}
+
+.previewShowTitle {
+  /* TV Show Title in preview tile */
 }
