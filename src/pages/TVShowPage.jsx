@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Page = () => {
+const TVShowPage = () => {
   return <div>This is the TV Show Page</div>
 }
 
