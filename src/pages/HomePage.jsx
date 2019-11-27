@@ -28,6 +28,7 @@ const HomePage = () => {
           return (
             <ShowPreview 
               key={show.id}
+              showId={show.id}
               imagePath={imageBranch + show.poster_path}
               name={show.name}
             />
