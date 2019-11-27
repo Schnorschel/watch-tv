@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const FeaturedShow = props => {
   const imageBranch = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2'
@@ -31,7 +32,7 @@ const FeaturedShow = props => {
     <>
     <p className="featuredShowHeader">{showData.name}</p>
     <section className="featuredShowImageContainer">
-      <img className="featuredShowImage" src={imageBranch + showData.poster_path} />
+      <Link to={'/tv/' + props.showId}><img className="featuredShowImage" src={imageBranch + showData.poster_path} /></Link>
     </section>
     <section className="featuredShowTextContainer">
       <p>{showData.overview}</p>
