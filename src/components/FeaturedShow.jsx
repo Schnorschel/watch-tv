@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 
 const FeaturedShow = props => {
-  const imageBranch = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2'
+  const imageBranch = 'https://image.tmdb.org/t/p/w500' // w185_and_h278_bestv2'
   const [showData, setShowData] = useState({
     credits: {
       cast: [],
@@ -30,7 +30,7 @@ const FeaturedShow = props => {
   return (
     showData ? 
     <>
-    <p className="featuredShowHeader">{showData.name}</p>
+    <p className="featuredShowHeader"><Link to={'/tv/' + props.showId}>{showData.name}</Link></p>
     <section className="featuredShowImageContainer">
       <Link to={'/tv/' + props.showId}><img className="featuredShowImage" src={imageBranch + showData.poster_path} /></Link>
     </section>
