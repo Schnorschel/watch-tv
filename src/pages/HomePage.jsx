@@ -7,6 +7,9 @@ import Footer from '../components/Footer'
 const HomePage = () => {
   const imageBranch = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2'
   const [showData, setShowData] = useState([])
+  const [featuredShowId, setFeaturedShowId] = useState(
+    Math.floor(Math.random() * 20)
+  )
 
   // prettier-ignore
   const getShowInfo = async () => {
@@ -22,7 +25,7 @@ const HomePage = () => {
   // prettier-ignore
   return (
     <>
-      {/* <FeaturedShow /> */}
+      <FeaturedShow showId={featuredShowId} />
       <section className="previewAllShowsContainer">
         {showData.map(show => {
           return (
