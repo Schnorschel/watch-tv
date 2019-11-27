@@ -1,49 +1,56 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import CastMemberListItem from '../components/CastMemberListItem'
 
 const TVShowPage = props => {
-  const [individualShowData, setIndividualShowData] = useState([])
+  const imageOriginal = 'https://image.tmdb.org/t/p/original/'
+  const [showData, setShowData] = useState({
+    credits: {
+      cast: [],
+      crew: [],
+    },
+  })
   const apiUrl =
     'https://api.themoviedb.org/3/tv/' +
     props.match.params.showId +
-    '?api_key=5a39bf29dd3b617bf0c511dbf50b9b2d&language=en-US&append_to_response=credits'
+    '?api_key=5a39bf29dd3b617bf0c511dbf50b9b2d&language=en-US&append_to_response=credits,images'
 
-  console.log('props: ', props.match.params.showId)
-  console.log('url: ', apiUrl)
-  const getIndividualShowInfo = async () => {
+  const getShowInfo = async () => {
     const resp = await axios.get(apiUrl)
-    setIndividualShowData(resp.data.results)
-    console.log(resp.data.results)
+    setShowData(resp.data)
   }
 
   useEffect(() => {
-    getIndividualShowInfo()
+    getShowInfo()
   }, [])
 
   return (
     <>
-      <heading>
-        <h1 className="tvShowTitle">There will be a title here.</h1>
-      </heading>
-      <section className="detailTVShowContainer">
-        <section className="detailPosterContainer">
-          <img src="some url" alt="TV Show Title Poster" />
+      <header>
+        <h1 className="tvShowTitle">{showData.name}</h1>
+      </header>
+      <main>
+        <section className="detailTVShowContainer">
+          <section className="detailPosterContainer">
+            <img
+              src={imageOriginal + showData.backdrop_path}
+              alt={showData.name + 'TV Show Title Poster: '}
+            />
+          </section>
+          <section className="overviewSection">
+            <h1 className="overviewH1">Overview</h1>
+            <p>{showData.overview}</p>
+          </section>
+          <section className="castSection">
+            <h1 className="castH1">Cast</h1>
+            <ul className="charactersUL">
+              {showData.credits.cast.map(actor => {
+                return <CastMemberListItem key={actor.id} actor={actor} />
+              })}
+            </ul>
+          </section>
         </section>
-        <section className="overviewSection">
-          <p>
-            ALF is an American sitcom television series that aired on NBC from
-            September 22, 1986, to March 24, 1990. The title character is Gordon
-            Shumway, a sarcastic, friendly extraterrestrial nicknamed ALF (an
-            acronym for Alien Life Form), who crash-lands in the garage of the
-            suburban middle-class Tanner family.
-          </p>
-        </section>
-        <ul className="charactersUL">
-          <li>Alf</li>
-          <li>Gordon</li>
-          <li>Sally</li>
-        </ul>
-      </section>
+      </main>
     </>
   )
 }
