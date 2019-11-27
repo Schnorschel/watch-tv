@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 import TVShowPage from './pages/TVShowPage'
 import HomePage from './pages/HomePage'
 import NotFound from './pages/NotFound'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route exact path="/tv/:showId" component={TVShowPage}></Route>
         <Route path="*" component={NotFound}></Route>
       </Switch>
+      <Footer />
     </Router>
   )
 }
