@@ -11,7 +11,9 @@ const Footer = () => {
         />
       </a>
       <p>
-        This product uses the TMDb API but is not endorsed or certified by TMDb.
+        This product uses the{' '}
+        <a href="https://www.themoviedb.org/documentation/api">TMDb API</a> but
+        is not endorsed or certified by TMDb.
       </p>
       <p>
         Made with &hearts; at <a href="http://suncoast.io">SDG</a>
