@@ -34,15 +34,16 @@ const TVShowPage = props => {
 
   return (
     <>
-      <header>
+      <header className="tvShowHeader">
         <h1 className="tvShowTitle">{showData.name}</h1>
       </header>
       <main>
         <section className="detailTVShowContainer">
           <section className="detailPosterContainer">
             <img
+              className="showImage"
               src={imageOriginal + showData.backdrop_path}
-              alt={showData.name + 'TV Show Title Poster: '}
+              alt={showData.name + ' TV Show Title Poster'}
             />
           </section>
           <section className="overviewSection">
