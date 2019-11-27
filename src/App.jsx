@@ -12,7 +12,7 @@ const App = () => {
         <nav>
           <ul>
             <li>
-              <Link to="/">Go Home</Link>
+              <Link to="/">Back to Home</Link>
             </li>
           </ul>
         </nav>
