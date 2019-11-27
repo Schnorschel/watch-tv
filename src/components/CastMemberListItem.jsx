@@ -10,10 +10,11 @@ const CastMemberListItem = prop => {
         src={imageBranch185 + prop.actor.profile_path}
         alt={'Picture of cast member ' + prop.actor.name}
       />
-      <p className="castMemberName">{prop.actor.name}</p>
-      <Link className="castMemberName" to={'/actor/' + prop.actor.id}>
-        {prop.actor.name}
-      </Link>
+      <p className="castMemberName">
+        <Link className="castMemberName" to={'/actor/' + prop.actor.id}>
+          {prop.actor.name}
+        </Link>
+      </p>
       <p className="character">{prop.actor.character}</p>
     </li>
   )
