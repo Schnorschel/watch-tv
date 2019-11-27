@@ -18,6 +18,13 @@ body {
   /* Container for featured TV Show section at top of Home Page */
 }
 
+.featuredShowImageContainer {
+}
+
+.featuredShowImage {
+  /* align: left; */
+}
+
 .previewAllShowsContainer {
   /* Container for all TV show preview tiles on Home Page */
   display: flex;
@@ -33,7 +40,7 @@ body {
   /* Container for images of TV show preview tiles on Home Page */
 }
 
-previewShowImage {
+.previewShowImage {
 }
 
 .previewShowTitle {
