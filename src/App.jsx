@@ -4,6 +4,7 @@ import TVShowPage from './pages/TVShowPage'
 import ActorPage from './pages/ActorPage'
 import HomePage from './pages/HomePage'
 import NotFound from './pages/NotFound'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Route exact path="/actor/:actorID" component={ActorPage}></Route>
         <Route path="*" component={NotFound}></Route>
       </Switch>
+      <Footer />
     </Router>
   )
 }

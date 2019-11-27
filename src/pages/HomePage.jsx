@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import FeaturedShow from '../components/FeaturedShow'
 import ShowPreview from '../components/ShowPreview'
-import Footer from '../components/Footer'
 
 // prettier-ignore
 const HomePage = () => {
@@ -45,7 +44,6 @@ const HomePage = () => {
           )
         })}
       </section>
-      {/* <Footer /> */}
     </>
   )
 }
