@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const CastMemberListItem = prop => {
   const imageBranch185 = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2'
@@ -9,7 +10,11 @@ const CastMemberListItem = prop => {
         src={imageBranch185 + prop.actor.profile_path}
         alt={'Picture of cast member ' + prop.actor.name}
       />
-      <p className="castMemberName">{prop.actor.name}</p>
+      <p className="castMemberName">
+        <Link className="castMemberName" to={'/actor/' + prop.actor.id}>
+          {prop.actor.name}
+        </Link>
+      </p>
       <p className="character">{prop.actor.character}</p>
     </li>
   )
