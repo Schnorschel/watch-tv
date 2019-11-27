@@ -23,7 +23,7 @@ const HomePage = () => {
   return (
     <>
       {/* <FeaturedShow /> */}
-      <section className="previewShowsContainer">
+      <section className="previewAllShowsContainer">
         {showData.map(show => {
           return (
             <ShowPreview 

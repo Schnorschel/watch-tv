@@ -18,7 +18,7 @@ body {
   /* Container for featured TV Show section at top of Home Page */
 }
 
-.previewShowsContainer {
+.previewAllShowsContainer {
   /* Container for all TV show preview tiles on Home Page */
   display: flex;
   flex-wrap: wrap;
@@ -26,10 +26,14 @@ body {
 
 .previewShowContainer {
   /* TV Show tile (container) on Home Page */
+  width: 24%;
 }
 
 .previewShowImageContainer {
   /* Container for images of TV show preview tiles on Home Page */
+}
+
+previewShowImage {
 }
 
 .previewShowTitle {
