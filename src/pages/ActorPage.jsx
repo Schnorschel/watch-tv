@@ -4,7 +4,7 @@ import ActorCreditListItem from '../components/ActorCreditListItem'
 
 const ActorPage = props => {
   // Start of url for images in full size
-  const imageOriginal = 'https://image.tmdb.org/t/p/original/'
+  const imageOriginal = 'https://image.tmdb.org/t/p/original'
   console.log(props)
 
   // Place the data returned from the API here.

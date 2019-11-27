@@ -4,7 +4,7 @@ import CastMemberListItem from '../components/CastMemberListItem'
 
 const TVShowPage = props => {
   // Start of url for images in full size
-  const imageOriginal = 'https://image.tmdb.org/t/p/original/'
+  const imageOriginal = 'https://image.tmdb.org/t/p/original'
 
   // Place the data returned from the API here.
   const [showData, setShowData] = useState({
