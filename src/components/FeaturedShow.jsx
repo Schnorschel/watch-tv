@@ -2,7 +2,12 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 const FeaturedShow = props => {
-  const [showData, setShowData] = useState([])
+  const imageBranch = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2'
+  const [showData, setShowData] = useState({
+    credits: {
+      cast: [],
+    },
+  })
   const [featuredShow, setFeaturedShow] = useState()
 
   // prettier-ignore
@@ -22,15 +27,23 @@ const FeaturedShow = props => {
 
   // prettier-ignore
   return (
-       showData ? 
-        <>
-        <h1>{showData.name}</h1>
-          <img className="featuredShowImage" />
-          <p></p> 
-        </>
-        : 'Loading featured TV Show data...' 
+    showData ? 
+    <>
+    <p className="featuredShowHeader">{showData.name}</p>
+    <section className="featuredShowImageContainer">
+      <img className="featuredShowImage" src={imageBranch + showData.poster_path} />
+    </section>
+    <section className="featuredShowTextContainer">
+      <p>{showData.overview}</p>
+      <p>Cast: {showData.credits.cast.filter((actor, index) => {
+        return index < 5
+      }).map((actor, index) => {
+        return (index > 0 ? ', ' : '') + actor.name
+      })}</p>
+    </section>
+    </>
+    : <p>Loading featured TV Show data...</p>
   )
-  // </section>
 }
 
 export default FeaturedShow
