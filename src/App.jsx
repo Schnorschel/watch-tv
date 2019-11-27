@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 import TVShowPage from './pages/TVShowPage'
+import ActorPage from './pages/ActorPage'
 import HomePage from './pages/HomePage'
 import NotFound from './pages/NotFound'
 
@@ -20,6 +21,7 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={HomePage}></Route>
         <Route exact path="/tv/:showId" component={TVShowPage}></Route>
+        <Route exact path="/actor/:actorID" component={ActorPage}></Route>
         <Route path="*" component={NotFound}></Route>
       </Switch>
     </Router>
