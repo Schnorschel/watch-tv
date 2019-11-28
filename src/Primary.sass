@@ -4,10 +4,25 @@
 // Import-only statement code like the one above is written here
 // Success on compile!
 
-// Naming conventions and notes so we know what's going on. I picked that up yesterday.
+// ****************
+// https://create-react-app.dev/docs/adding-a-sass-stylesheet/
+// I renamed because we could potentially
+// use better file structure for our SASS styling. our .sass file to Primary.sass It would appear that SASS
+// files, unlike CSS files, are often used in a best practice way to better
+// sort/compartmentalize style pages for structure, just like how components
+// and pages do for JSX. Jason mentioned the browser will still compile
+// multiple SASS files in his presentation today, so it's an advantage for
+// readable code.
+// I see there are separate JSX components for the footer, page selector etc.
+// and it makes so much more sense to style these in their own SASS files and
+// then link them back to the Primary.SASS here. I will experiment with this
+// concept very briefly either tomorrow (Thanksgiving) or Friday early in a
+// separate project and advise the outcome in our slack channel.
 
-// Add this code to top of any .sass file you may want to make:
-// Also you can grab the font import statement and color code for theme consistency from the top of TVShowPage.sass and place it above on your new .sass file so our colors/fonts are similar.
+// Here is the link for our main 5 colors in theme:
+// https://coolors.co/1f3325-537c59-dde8dc-606060-60504e
+// I renamed the colors in this file to what makes sense, as the squares that
+// indicate color did not auto-populate
 
 // html
 //   height: 100%
