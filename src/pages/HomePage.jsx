@@ -10,7 +10,7 @@ const HomePage = () => {
   const [showData, setShowData] = useState([])
   const [featuredShowIndex, setFeaturedShowIndex] = useState( Math.floor(Math.random() * 20) )
   const [featuredShowId, setFeaturedShowId] = useState()
-  const [currentPageNo, setCurrentPageNo]= useState(1)
+  const [currentPageNo, setCurrentPageNo]= useState(25)
   const [totalPages, setTotalPages] = useState()
 
   // prettier-ignore
@@ -54,10 +54,10 @@ const HomePage = () => {
           )
         })}
       </section>
-      <PageSelector 
+      {/* <PageSelector 
         thisPage={currentPageNo} 
         allPages={totalPages} 
-        handleNewPage={getShowInfo} />
+        handleNewPage={getShowInfo} /> */}
     </>
   )
 }
