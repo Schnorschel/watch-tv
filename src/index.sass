@@ -15,6 +15,9 @@ body
   min-height: 100%
   background-color: $lightest-backdrop-gray
 
+*
+  box-sizing: border-box
+
 h1
   color: $dark-leather-green
   text-align: center
@@ -38,7 +41,6 @@ header ul
   flex-wrap: wrap
   justify-content: center
   margin: 0 5%
-  object-fit: contain
 
 //.featuredShowImageContainer
 
@@ -51,20 +53,32 @@ header ul
   display: flex
   flex-wrap: wrap
   text-align: center
+  margin: 0 5%
+  font-family: Poppins , sans-serif
 
 .previewAllShowsContainer
+//  Container for all TV show preview tiles on Home Page
   display: flex
   flex-wrap: wrap
-//  Container for all TV show preview tiles on Home Page
+  justify-content: center
 
-// .previewShowContainer
-//   width: 24%
-// TV Show tile container on Home Page for tablet
+.previewShowContainer
+  width: 30%
+  margin: 0 1%
+  border: 2px solid green
+// TV Show tile container on Home Page
 
-// .previewShowImageContainer
+.previewShowImageContainer
+  display: flex
+  flex-wrap: wrap
+  flex-directon: row
+  justify-content: center
+  border: 1px solid black
+
 //  /* Container for images of TV show preview tiles on Home Page */
 
-// .previewShowImage
+.previewShowImage
+  width: 100%
 
 // .previewShowTitle
 //  /* TV Show Title in preview tile */
