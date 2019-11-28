@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins|Roboto+Slab&display=swap')
+
+$dark-leather-green: #1f3325
+$fern-style-green: #527C59
+$lightest-backdrop-gray: #DDE8DC
+$granite-style-gray: #606060
+$soft-bark-brown: #60504E
+
+// ****************
+// http://thesassway.com/beginner/how-to-structure-a-sass-project
+// I renamed our .sass file to Primary.sass because we could potentially use better file structure for our SASS styling
+// It would appear that SASS files, unlike CSS files, are often used in a best practice way to better sort/compartmentalize style pages for structure, just like how components and pages do for JSX
+// Jason mentioned the browser will still compile multiple SASS files in his presentation today, so it's an advantage for readable code.
+// I see there are separate JSX components for the footer, page selector etc. and it makes so much more sense to style these in their own SASS files and then link them back to the Primary.SASS here
+// I will experiment with this concept very briefly either tomorrow (Thanksgiving) or Friday early in a separate project and advise the outcome in our slack channel
+
+// Here is the link for our main 5 colors in theme: https://coolors.co/1f3325-537c59-dde8dc-606060-60504e
+// I renamed the colors in this file to what makes sense, as the squares that indicate color did not auto-populate
+
+html
+  height: 100%
+  font: 16px 1 sans-serif
+
+body
+  margin: 0
+  min-height: 100%
+  background-color: $lightest-backdrop-gray
+
+*
+  box-sizing: border-box
+  font-family: Poppins , sans-serif
+
+h1
+  color: $dark-leather-green
+  text-align: center
+  font-family: Roboto, sans-serif
+
+header ul
+  display: none
+
+.featuredShowHeader
+  text-align: center
+  font-family: Roboto, sans-serif
+  font-size: x-large
+  width: 100%
+
+.featuredShowHeader a
+  color: $soft-bark-brown
+
+// commented out for now, as was interfering with .featuredShowImageContainer showing as centered, will tweak more so it looks better for desktop
+// Container for featured TV Show section at top of Home Page
+// .featuredShowContainer
+//   display: flex
+//   flex-wrap: wrap
+
+.featuredShowImageContainer
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  margin: 0 5%
+
+.featuredShowImage
+  width: 100%
+
+.featuredShowTextContainer
+  display: flex
+  flex-wrap: wrap
+  text-align: center
+  margin: 0 5%
+  font-family: Poppins , sans-serif
+  text-align: left
+
+// -----left this here, was this line a reference for you, Georg?----------------------------------------------
+
+//  Container for all TV show preview tiles on Home Page
+.previewAllShowsContainer
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+
+// TV Show preview tile container on Home Page
+.previewShowContainer
+  display: flex
+  flex-wrap: wrap
+  width: 47%
+  margin: 0 1%
+
+// Link to TV show details
+.previewShowContainer a
+  color: $soft-bark-brown
+
+// Container for images of TV show preview tiles on Home Page
+.previewShowImageContainer
+  display: flex
+  flex-wrap: wrap
+  width: 100%
+  justify-content: center
+
+// Preview tile images
+.previewShowImage
+  width: 100%
+
+// TV Show Title in preview tile
+.previewShowTitle
+  width: 100%
+  text-align: center
+
+.pageSelectorContainer
+  display: flex
+  justify-content: center
+
+// .pageSelectorElement
+
+.footer
+  display: flex
+  justify-content: space-between
+  align-items: baseline
+
+.attributionLogo
+  width: 50px
+
+//Begins styling for tvshow page tablet
+@media(min-width: 768px)
+
+  .previewShowContainer
+    width: 23%
+
+//Begins styling for tvshow page desktop
+@media(min-width: 1200px)
+
+  .previewShowContainer
+    width: 18%
