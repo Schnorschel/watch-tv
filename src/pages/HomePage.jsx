@@ -6,7 +6,7 @@ import PageSelector from '../components/PageSelector'
 
 // prettier-ignore
 const HomePage = () => {
-  const imageBranch = 'https://image.tmdb.org/t/p/w500' //w185_and_h278_bestv2'
+  const imageBranch = 'https://image.tmdb.org/t/p/w500' // w500' //w185_and_h278_bestv2'
   const [showData, setShowData] = useState([])
   const [featuredShowIndex, setFeaturedShowIndex] = useState( Math.floor(Math.random() * 20) )
   const [featuredShowId, setFeaturedShowId] = useState()
