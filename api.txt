@@ -3,3 +3,5 @@ https://api.themoviedb.org/3/tv/87108/credits?api_key=5a39bf29dd3b617bf0c511dbf5
 https://api.themoviedb.org/3/tv/87108?api_key=5a39bf29dd3b617bf0c511dbf50b9b2d&language=en-US
 
 https://api.themoviedb.org/3/tv/87108?api_key=5a39bf29dd3b617bf0c511dbf50b9b2d&language=en-US&append_to_response=credits
+
+https://www.themoviedb.org/assets/2/v4/logos/primary-green-d70eebe18a5eb5b166d5c1ef0796715b8d1a2cbc698f96d311d62f894ae87085.svg
