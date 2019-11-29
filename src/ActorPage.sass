@@ -52,11 +52,9 @@ body
 
 .castSection ul
   margin: 0
-  border: solid green 2px
   display: flex
   flex-direction: row
   flex-wrap: wrap
-  justify-content: space-between
   padding: 0
 
 .castMemberImage
@@ -65,7 +63,19 @@ body
 .castMemberLI
   width: 47%
   margin: 0 1%
-  border:
 
 li
   list-style-type: none
+
+.footer
+  margin-top: auto
+
+@media(min-width: 768px)
+
+  .castMemberLI
+    width: 23%
+
+@media(min-width: 1200px)
+
+  .castMemberLI
+    width: 18%
