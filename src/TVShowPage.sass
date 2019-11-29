@@ -1,25 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins|Roboto+Slab&display=swap')
 
+// this file addresses the TV Show Page Details page, when viewed in browser
+
 $dark-leather-green: #1f3325
 $fern-style-green: #527C59
 $lightest-backdrop-gray: #DDE8DC
 $granite-style-gray: #606060
 $soft-bark-brown: #60504E
-
-// ****************
-// https://create-react-app.dev/docs/adding-a-sass-stylesheet/ <this link is better than the previous one
-// I renamed our .sass file to Primary.sass because we will now use it for import only statements.
-// SASS files, unlike CSS files, are often used in best practice to better sort/compartmentalize style pages for structure, just like how components and pages do for JSX
-// Readable code is the clear advantage and not stepping on each other's toes as the project scales.
-// I see there are separate JSX components for the footer, page selector etc. and it makes much more sense to style these in their own SASS files and then link them back to the Primary.SASS file
-
-// ******
-// Success on compile, see slack for update details if you wish.
-
-// Here is the link for our main 5 colors in theme: https://coolors.co/1f3325-537c59-dde8dc-606060-60504e
-// You are able to unlock any color and page through to see what looks good together if you wish.
-// You could use other colors for accents, maybe some kind of yellow or what you like, but let's try to be consistent.
-// I apologize for the color naming conventions here, I was not able to see auto-population of colors until creating an import only sass file this morning.
 
 html
   height: 100%
@@ -34,39 +21,17 @@ body
   box-sizing: border-box
   font-family: Poppins , sans-serif
 
-h1
-  color: $dark-leather-green
-  text-align: center
-  font-family: Roboto, sans-serif
-
-header ul
-  display: none
-
-.featuredShowHeader
+.tvShowTitle
   text-align: center
   font-family: Roboto, sans-serif
   font-size: x-large
   width: 100%
-
-.featuredShowHeader a
   color: $soft-bark-brown
 
-// commented out for now, as was interfering with .featuredShowImageContainer showing as centered, will tweak more so it looks better for desktop
-// Container for featured TV Show section at top of Home Page
-// .featuredShowContainer
-//   display: flex
-//   flex-wrap: wrap
+.overviewSection h1
+  color: $soft-bark-brown
 
-.featuredShowImageContainer
-  display: flex
-  flex-wrap: wrap
-  justify-content: center
-  margin: 0 5%
-
-.featuredShowImage
-  width: 100%
-
-.featuredShowTextContainer
+.overviewSection p
   display: flex
   flex-wrap: wrap
   text-align: center
@@ -74,63 +39,45 @@ header ul
   font-family: Poppins , sans-serif
   text-align: left
 
-// -----left this here, was this line a reference for you, Georg?----------------------------------------------
-
-//  Container for all TV show preview tiles on Home Page
-.previewAllShowsContainer
+.detailPosterContainer
   display: flex
   flex-wrap: wrap
   justify-content: center
+  margin: 0 5%
 
-// TV Show preview tile container on Home Page
-.previewShowContainer
+.showImage
+  width: 100%
+
+.castSection h1
+  text-align: center
+  color: $soft-bark-brown
+
+.castSection ul
+  margin: 0
   display: flex
+  flex-direction: row
   flex-wrap: wrap
+  padding: 0
+
+.castMemberImage
+  width: 100%
+
+.castMemberLI
   width: 47%
   margin: 0 1%
 
-// Link to TV show details
-.previewShowContainer a
-  color: $soft-bark-brown
-
-// Container for images of TV show preview tiles on Home Page
-.previewShowImageContainer
-  display: flex
-  flex-wrap: wrap
-  width: 100%
-  justify-content: center
-
-// Preview tile images
-.previewShowImage
-  width: 100%
-
-// TV Show Title in preview tile
-.previewShowTitle
-  width: 100%
-  text-align: center
-
-.pageSelectorContainer
-  display: flex
-  justify-content: center
-
-// .pageSelectorElement
+li
+  list-style-type: none
 
 .footer
-  display: flex
-  justify-content: space-between
-  align-items: baseline
+  margin-top: auto
 
-.attributionLogo
-  width: 50px
-
-//Begins styling for tvshow page tablet
 @media(min-width: 768px)
 
-  .previewShowContainer
+  .castMemberLI
     width: 23%
 
-//Begins styling for tvshow page desktop
 @media(min-width: 1200px)
 
-  .previewShowContainer
+  .castMemberLI
     width: 18%
