@@ -116,9 +116,23 @@ header ul
 
 .pageSelectorContainer
   display: flex
+  flex-wrap: nowrap
   justify-content: center
+  margin: 20px
 
-// .pageSelectorElement
+.pageButton
+  font: size 2rem
+  font-weight: bolder
+  margin: 0 3px
+
+.ellipsis
+  margin: 5px
+
+.thisPage
+  color: white
+  background-color: black
+
+  // .pageSelectorElement
 
 .footer
   display: flex
@@ -127,13 +141,6 @@ header ul
 
 .attributionLogo
   width: 50px
-
-.pageButton
-  font: size 2rem
-  font-weight: bolder
-
-.thisPage
-  color: green
 
 //Begins styling for tvshow page tablet
 @media(min-width: 768px)

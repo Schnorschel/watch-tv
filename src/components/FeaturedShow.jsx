@@ -9,11 +9,10 @@ const FeaturedShow = props => {
       cast: [],
     },
   })
-  const [featuredShow, setFeaturedShow] = useState()
 
   // prettier-ignore
   const getFeaturedShowInfo = async () => {
-    console.log('Attempting to get: ' + 'https://api.themoviedb.org/3/tv/' + props.showId + '?api_key=5a39bf29dd3b617bf0c511dbf50b9b2d&language=en-US&append_to_response=credits')
+    console.log('getFeaturedShowInfo: attempting to get: https://api.themoviedb.org/3/tv/' + props.showId + '?api_key=5a39bf29dd3b617bf0c511dbf50b9b2d&language=en-US&append_to_response=credits')
     if (typeof props.showId === 'undefined') {
       return
     }
