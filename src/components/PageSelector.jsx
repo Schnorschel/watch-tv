@@ -27,6 +27,9 @@ const PageSelector = (props) => {
   return (
     <section className="pageSelectorContainer">
      <form onSubmit={handleFormSubmit}>
+      {(props.thisPage != 1) ? <button className="pageButton" 
+                                       value={parseInt(props.thisPage) - 1}
+                                       onClick={e => props.handleNewPage(e.target.value)}><i class="fas fa-chevron-left"></i> Previous Page</button> : ''}
       {pageSelectorArray.map((pageNumber, index) => {
         return (pageNumber === '..' ? 
                   <span className="ellipsis" key={index}><i className="fas fa-ellipsis-h"></i></span> : 
@@ -36,6 +39,9 @@ const PageSelector = (props) => {
                           value={pageNumber}
                           onClick={e => props.handleNewPage(e.target.value)}>{pageNumber}</button>)
       } )}
+      {(props.thisPage != props.allPages) ? <button className="pageButton" 
+                                       value={parseInt(props.thisPage) + 1}
+                                       onClick={e => props.handleNewPage(e.target.value)}>Next Page <i class="fas fa-chevron-right"></i></button> : ''}
      </form>
     </section>
   )

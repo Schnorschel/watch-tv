@@ -46,95 +46,14 @@ h1
   font-family: Roboto, sans-serif
 
 header ul
-  display: none
-
-.featuredShowHeader
-  text-align: center
-  font-family: Roboto, sans-serif
-  font-size: x-large
-  width: 100%
-
-.featuredShowHeader a
-  color: $soft-bark-brown
-
-// commented out for now, as was interfering with .featuredShowImageContainer showing as centered, will
-// tweak more so it looks better for desktop.
-// Container for featured TV Show section at top of Home Page
-// .featuredShowContainer
-//   display: flex
-//   flex-wrap: wrap
-
-.featuredShowImageContainer
-  display: flex
-  flex-wrap: wrap
-  justify-content: center
-  margin: 0 5%
-
-.featuredShowImage
-  width: 100%
-
-.featuredShowTextContainer
-  display: flex
-  flex-wrap: wrap
-  text-align: center
-  margin: 0 5%
-  font-family: Poppins , sans-serif
-  text-align: left
-
-// -----left this here, was this line a reference for you, Georg?----------------------------------------------
+  // display: none
+  list-style-type: none
 
 //  Container for all TV show preview tiles on Home Page
 .previewAllShowsContainer
   display: flex
   flex-wrap: wrap
   justify-content: flex-start
-
-// TV Show preview tile container on Home Page
-.previewShowContainer
-  display: flex
-  flex-wrap: wrap
-  width: 47%
-  margin: 0 1%
-
-// Link to TV show details
-.previewShowContainer a
-  color: $soft-bark-brown
-
-// Container for images of TV show preview tiles on Home Page
-.previewShowImageContainer
-  display: flex
-  flex-wrap: wrap
-  width: 100%
-  justify-content: center
-
-// Preview tile images
-.previewShowImage
-  width: 100%
-
-// TV Show Title in preview tile
-.previewShowTitle
-  width: 100%
-  text-align: center
-
-.pageSelectorContainer
-  display: flex
-  flex-wrap: nowrap
-  justify-content: center
-  margin: 20px
-
-.pageButton
-  font: size 2rem
-  font-weight: bolder
-  margin: 0 3px
-
-.ellipsis
-  margin: 5px
-
-.thisPage
-  color: white
-  background-color: black
-
-  // .pageSelectorElement
 
 .footer
   display: flex
@@ -143,15 +62,3 @@ header ul
 
 .attributionLogo
   width: 50px
-
-//Begins styling for tvshow page tablet
-@media(min-width: 768px)
-
-  .previewShowContainer
-    width: 23%
-
-//Begins styling for tvshow page desktop
-@media(min-width: 1200px)
-
-  .previewShowContainer
-    width: 18%
