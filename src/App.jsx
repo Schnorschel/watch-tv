@@ -26,6 +26,7 @@ const App = () => {
         <Route path="*" component={NotFound}></Route>
       </Switch>
       <Footer />
+      <section className="footerPadding"></section>
     </Router>
   )
 }
