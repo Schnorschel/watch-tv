@@ -6,25 +6,22 @@ $lightest-backdrop-gray: #DDE8DC
 $granite-style-gray: #606060
 $soft-bark-brown: #60504E
 
-// ****************
-// http://thesassway.com/beginner/how-to-structure-a-sass-project
-// I renamed our .sass file to Primary.sass because we could potentially
-// use better file structure for our SASS styling. It would appear that SASS
-// files, unlike CSS files, are often used in a best practice way to better
-// sort/compartmentalize style pages for structure, just like how components
-// and pages do for JSX. Jason mentioned the browser will still compile
-// multiple SASS files in his presentation today, so it's an advantage for
-// readable code.
-// I see there are separate JSX components for the footer, page selector etc.
-// and it makes so much more sense to style these in their own SASS files and
-// then link them back to the Primary.SASS here. I will experiment with this
-// concept very briefly either tomorrow (Thanksgiving) or Friday early in a
-// separate project and advise the outcome in our slack channel.
+// this file addresses the home landing page
 
-// Here is the link for our main 5 colors in theme:
-// https://coolors.co/1f3325-537c59-dde8dc-606060-60504e
-// I renamed the colors in this file to what makes sense, as the squares that
-// indicate color did not auto-populate
+// ****************
+// https://create-react-app.dev/docs/adding-a-sass-stylesheet/ <this link is better than the previous one
+// **renamed Primary.sass back to index.sass and corrected file naming convention issues
+// SASS files, unlike CSS files, are often used in best practice to better sort/compartmentalize style pages for structure, just like how components and pages do for JSX
+// Readable code is the clear advantage and not stepping on each other's toes as the project scales.
+// I see there are separate JSX components for the footer, page selector etc. and it makes much more sense to style these in their own SASS files and then link them back to the Primary.SASS file
+
+// ******
+// Success on compile, see slack for update details if you wish.
+
+// Here is the link for our main 5 colors in theme: https://coolors.co/1f3325-537c59-dde8dc-606060-60504e
+// You are able to unlock any color and page through to see what looks good together if you wish.
+// You could use other colors for accents, maybe some kind of yellow or what you like, but let's try to be consistent.
+// I apologize for the color naming conventions here, I was not able to see auto-population of colors until creating an import only sass file this morning.
 
 html
   height: 100%

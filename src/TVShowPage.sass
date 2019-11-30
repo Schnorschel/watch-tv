@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins|Roboto+Slab&display=swap')
+
+// this file addresses the TV Show Page Details page, when viewed in browser
+
+$dark-leather-green: #1f3325
+$fern-style-green: #527C59
+$lightest-backdrop-gray: #DDE8DC
+$granite-style-gray: #606060
+$soft-bark-brown: #60504E
+
+html
+  height: 100%
+  font: 16px 1 sans-serif
+
+body
+  margin: 0
+  min-height: 100%
+  background-color: $lightest-backdrop-gray
+
+*
+  box-sizing: border-box
+  font-family: Poppins , sans-serif
+
+.tvShowTitle
+  text-align: center
+  font-family: Roboto, sans-serif
+  font-size: x-large
+  width: 100%
+  color: $soft-bark-brown
+
+.overviewSection h1
+  color: $soft-bark-brown
+
+.overviewSection p
+  display: flex
+  flex-wrap: wrap
+  text-align: center
+  margin: 0 5%
+  font-family: Poppins , sans-serif
+  text-align: left
+
+.detailPosterContainer
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  margin: 0 5%
+
+.showImage
+  width: 100%
+
+.castSection h1
+  text-align: center
+  color: $soft-bark-brown
+
+.castSection ul
+  margin: 0
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  padding: 0
+
+.castMemberImage
+  width: 100%
+
+.castMemberLI
+  width: 47%
+  margin: 0 1%
+
+.charactersUL li
+  list-style-type: none
+
+//may tweak this after footer sass file is built
+.footer
+  margin-top: auto
+
+@media(min-width: 768px)
+
+  .castMemberLI
+    width: 23%
+
+@media(min-width: 1200px)
+
+  .castMemberLI
+    width: 18%
