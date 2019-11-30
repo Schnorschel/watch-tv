@@ -41,7 +41,10 @@ const HomePage = () => {
   }
 
   const GetNewShowInfo = async () => {
-    if (typeof currentPageNo === 'undefined') return
+    if (typeof currentPageNo === 'undefined') {
+      console.log('HomePage.GetNewShowInfo: ' + currentPageNo)
+      return
+    }
     const resp = await axios.get('https://api.themoviedb.org/3/tv/top_rated?api_key=5a39bf29dd3b617bf0c511dbf50b9b2d&language=en-US&page=' + currentPageNo)
     setShowData(resp.data.results)
     console.log('GetNewShowInfo: resp.data: ' + resp.data)
@@ -54,7 +57,6 @@ const HomePage = () => {
 
   useEffect(() => {
     GetNewShowInfo()
-
   }, [currentPageNo]);
 
   // const featuredShowId = showData.filter((show, index) => {
@@ -67,11 +69,11 @@ const HomePage = () => {
       <section className="featuredShowContainer">
         {featuredShowId && <FeaturedShow showId={featuredShowId} /> }
       </section>
-      <PageSelector 
+      {currentPageNo && <PageSelector 
         key={currentPageNo}
         thisPage={currentPageNo} 
         allPages={totalPages} 
-        handleNewPage={setCurrentPageNo} />
+        handleNewPage={setCurrentPageNo} />}
       <section className="previewAllShowsContainer">
         {showData.map(show => {
           return (
